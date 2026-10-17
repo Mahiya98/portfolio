@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahiya Watid — IPE Engineer &amp; Data Analyst</title>
+<meta name="description" content="Portfolio of Mahiya Watid — Industrial &amp; Production Engineer and Data Analyst specialising in process improvement, AI, machine learning, deep learning and Lean Six Sigma.">
+<meta name="theme-color" content="#08111f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d9488'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EMW%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#f5f8fc; --surface:#ffffff; --ink:#0b1526; --muted:#5b6b82;
+    --line:#e1e8f2; --line-strong:#cbd6e6;
+    --brand:#0d9488; --brand-deep:#0f766e; --blue:#2563eb; --amber:#f59e0b;
+    --navy:#08111f; --navy-2:#0f2138;
+    --radius:18px; --radius-sm:12px;
+    --shadow:0 18px 50px rgba(11,21,38,.10);
+    --shadow-sm:0 8px 24px rgba(11,21,38,.07);
+    --max:1120px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ul{margin:0;padding:0;list-style:none}
+  h1,h2,h3,h4,p{margin:0}
+  button{font:inherit}
+  ::selection{background:#99f6e4;color:#042f2e}
+
+  .skip{
+    position:absolute;left:-999px;top:0;z-index:200;
+    background:var(--brand);color:#fff;padding:12px 18px;border-radius:0 0 10px 0;font-weight:700;
+  }
+  .skip:focus{left:0}
+  .container{width:min(100% - 40px,var(--max));margin-inline:auto}
+  .narrow{max-width:760px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--brand-deep);margin-bottom:14px;
+  }
+  .eyebrow .dot{
+    width:7px;height:7px;border-radius:50%;background:var(--brand);
+    box-shadow:0 0 0 4px rgba(13,148,136,.14);
+  }
+  .section{padding:92px 0;scroll-margin-top:84px}
+  .section-alt{
+    background:
+      radial-gradient(900px 400px at 10% 0%,rgba(37,99,235,.05),transparent 60%),
+      radial-gradient(700px 380px at 100% 100%,rgba(13,148,136,.06),transparent 60%),
+      #eef3f9;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .section-head{max-width:720px;margin-bottom:44px}
+  .section-head h2,.section h2{font-size:clamp(1.7rem,3.4vw,2.45rem);line-height:1.15;letter-spacing:-.025em}
+  .section-sub{color:var(--muted);margin-top:12px;max-width:620px}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(8,17,31,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav-wrap{
+    width:min(100% - 40px,var(--max));margin-inline:auto;
+    display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:70px;
+  }
+  .brand{display:flex;align-items:center;gap:11px;color:#fff}
+  .brand-mark{
+    width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#14b8a6,#2563eb);
+    font-size:14px;font-weight:900;letter-spacing:.02em;color:#fff;
+    box-shadow:0 6px 18px rgba(20,184,166,.35);
+  }
+  .brand-text{font-weight:800;font-size:15px;line-height:1.15;display:flex;flex-direction:column}
+  .brand-text small{font-weight:600;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#8fa3bf}
+  .site-header nav{display:flex;align-items:center;gap:26px}
+  .site-header nav a{
+    color:#b7c4d8;font-size:13.5px;font-weight:600;padding:6px 2px;position:relative;transition:color .2s;
+  }
+  .site-header nav a::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;
+    background:linear-gradient(90deg,#2dd4bf,#60a5fa);transform:scaleX(0);transform-origin:left;transition:transform .25s;
+  }
+  .site-header nav a:hover,.site-header nav a.active{color:#fff}
+  .site-header nav a:hover::after,.site-header nav a.active::after{transform:scaleX(1)}
+  .nav-cta{flex:none}
+  .menu-toggle{
+    display:none;width:42px;height:42px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.04);border-radius:11px;cursor:pointer;padding:10px;
+  }
+  .menu-toggle span{display:block;height:2px;background:#fff;border-radius:2px;margin:5px 0;transition:.25s}
+  .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    padding:13px 22px;border-radius:12px;font-size:14.5px;font-weight:750;line-height:1;
+    border:1px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s,color .18s;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn:active{transform:translateY(0)}
+  .btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #5eead4;outline-offset:3px}
+  .btn-primary{
+    background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;
+    box-shadow:0 10px 24px rgba(13,148,136,.28);
+  }
+  .btn-primary:hover{box-shadow:0 14px 30px rgba(13,148,136,.36)}
+  .btn-ghost{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-outline{background:transparent;border-color:rgba(255,255,255,.28);color:#fff;font-size:13px;padding:10px 16px}
+  .btn-outline:hover{background:rgba(255,255,255,.1)}
+  .btn-sm{padding:10px 16px;font-size:13px;border-radius:10px}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;color:#fff;overflow:hidden;
+    background:linear-gradient(150deg,#07101d 0%,#0b1b30 52%,#0c2233 100%);
+  }
+  .hero-bg{position:absolute;inset:0;pointer-events:none}
+  .hero-bg::before{
+    content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:54px 54px;
+    mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 25%,transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 30%,#000 25%,transparent 75%);
+  }
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(720px 420px at 82% 12%,rgba(37,99,235,.30),transparent 65%),
+      radial-gradient(600px 420px at 8% 88%,rgba(13,148,136,.26),transparent 65%);
+  }
+  .hero-grid{
+    position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+    padding:84px 0 92px;
+  }
+  .hero .eyebrow{color:#5eead4}
+  .hero .eyebrow .dot{background:#2dd4bf;box-shadow:0 0 0 4px rgba(45,212,191,.16)}
+  .hero h1{
+    font-size:clamp(2.35rem,5.1vw,4.05rem);line-height:1.04;letter-spacing:-.04em;font-weight:850;
+    max-width:13ch;
+  }
+  .grad{
+    background:linear-gradient(95deg,#5eead4 0%,#7dd3fc 55%,#93c5fd 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{color:#b9c7da;font-size:clamp(15.5px,1.35vw,17.5px);max-width:56ch;margin-top:22px;line-height:1.72}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:28px;color:#8fa3bf;font-size:13.5px}
+  .hero-meta a{color:#c7d6ea;border-bottom:1px solid rgba(199,214,234,.3)}
+  .hero-meta a:hover{color:#fff}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .chips li{
+    font-size:11.5px;font-weight:750;letter-spacing:.04em;color:#cfe3f3;
+    border:1px solid rgba(148,190,224,.24);background:rgba(148,190,224,.08);
+    padding:7px 12px;border-radius:999px;
+  }
+
+  .profile-card{
+    background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.035));
+    border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:26px;
+    box-shadow:0 30px 70px rgba(0,0,0,.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    position:relative;overflow:hidden;
+  }
+  .profile-card::before{
+    content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+    right:-60px;top:-70px;background:radial-gradient(circle,rgba(45,212,191,.30),transparent 70%);
+  }
+  .profile-top{display:flex;align-items:center;gap:15px;position:relative}
+  .avatar{
+    width:58px;height:58px;border-radius:17px;flex:none;display:grid;place-items:center;
+    background:linear-gradient(135deg,#2dd4bf,#3b82f6);color:#042f2e;
+    font-weight:900;font-size:18px;letter-spacing:.02em;
+    box-shadow:0 10px 24px rgba(45,212,191,.30);
+  }
+  .profile-top h2{font-size:19px;letter-spacing:-.01em}
+  .profile-top p{color:#9fb2c9;font-size:12.5px;margin-top:2px}
+  .profile-divider{height:1px;background:rgba(255,255,255,.12);margin:20px 0}
+  .profile-label{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6f88a6}
+  .profile-current{font-size:14px;color:#dbe7f5;font-weight:650;margin-top:5px}
+  .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+  .mini{
+    background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);
+    border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;
+  }
+  .mini-k{font-size:9.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#6f88a6}
+  .mini-v{font-size:12px;font-weight:650;color:#e5eef9}
+  .spark{display:flex;align-items:flex-end;gap:5px;height:56px;margin-top:20px;padding:0 2px}
+  .spark span{
+    flex:1;height:var(--h);border-radius:4px 4px 2px 2px;
+    background:linear-gradient(180deg,#2dd4bf,#2563eb);opacity:.85;
+    animation:grow .9s cubic-bezier(.2,.7,.2,1) both;
+  }
+  @keyframes grow{from{height:0;opacity:0}to{height:var(--h);opacity:.85}}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:start}
+  .about-grid p{color:var(--muted);font-size:16.5px;line-height:1.8}
+  .about-grid p + p{margin-top:16px}
+  .about-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+  .fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 16px;box-shadow:var(--shadow-sm)}
+  .fact b{display:block;font-size:13.5px;margin-bottom:2px}
+  .fact span{font-size:12px;color:var(--muted)}
+
+  /* ---------- timeline ---------- */
+  .timeline{position:relative;display:grid;gap:26px;max-width:900px}
+  .timeline::before{
+    content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(180deg,#14b8a6,#bfdbfe 55%,transparent);
+  }
+  .job{
+    position:relative;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 28px 26px 58px;box-shadow:var(--shadow-sm);
+    transition:transform .22s,box-shadow .22s;
+  }
+  .job:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .job::before{
+    content:"";position:absolute;left:4px;top:32px;width:16px;height:16px;border-radius:50%;
+    background:#fff;border:4px solid var(--brand);box-shadow:0 0 0 4px #eef3f9;
+  }
+  .job-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+  .job h3{font-size:17.5px;letter-spacing:-.01em;line-height:1.35}
+  .job-date{
+    font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-deep);
+    background:#e6f7f4;border:1px solid #c5ece6;border-radius:999px;padding:5px 10px;white-space:nowrap;
+  }
+  .job-company{font-size:13.5px;color:var(--muted);font-weight:650;margin-top:4px}
+  .job ul{margin-top:15px;display:grid;gap:8px}
+  .job li{position:relative;padding-left:18px;font-size:14px;color:#3c4a5f;line-height:1.6}
+  .job li::before{
+    content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;
+    background:#94a3b8;
+  }
+
+  /* ---------- education ---------- */
+  .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .edu{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;
+    transition:transform .22s,box-shadow .22s;
+  }
+  .edu:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .edu::after{
+    content:"";position:absolute;left:0;top:0;width:100%;height:4px;
+    background:linear-gradient(90deg,#14b8a6,#3b82f6);
+  }
+  .edu .year{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .edu h3{font-size:16px;line-height:1.4;margin:10px 0 6px;letter-spacing:-.01em}
+  .edu .school{font-size:13px;color:var(--muted);font-weight:600}
+  .edu .score{display:inline-block;margin-top:14px;font-size:12px;font-weight:800;color:var(--brand-deep);background:#e6f7f4;border-radius:8px;padding:5px 9px}
+
+  /* ---------- projects ---------- */
+  .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .project{
+    display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm);
+    transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden;
+  }
+  .project::before{
+    content:"";position:absolute;inset:0 0 auto;height:3px;
+    background:linear-gradient(90deg,#14b8a6,#3b82f6);opacity:0;transition:opacity .22s;
+  }
+  .project:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c9d7e9}
+  .project:hover::before{opacity:1}
+  .project-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .p-num{font-size:11px;font-weight:900;letter-spacing:.14em;color:#a7b6c9}
+  .badge{
+    font-size:10px;font-weight:850;letter-spacing:.09em;text-transform:uppercase;
+    padding:5px 9px;border-radius:999px;border:1px solid transparent;
+  }
+  .badge-live{color:#067a5c;background:#e7f8f1;border-color:#c5efe0}
+  .badge-demo{color:#1d4ed8;background:#eaf1ff;border-color:#d3e2ff}
+  .badge-code{color:#334155;background:#eef2f7;border-color:#dbe3ee}
+  .project h3{font-size:17px;line-height:1.35;letter-spacing:-.015em;margin-bottom:10px}
+  .p-use{font-size:13.5px;color:#43526a;line-height:1.62}
+  .p-benefit{
+    font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:12px;
+    padding-top:12px;border-top:1px dashed var(--line);
+  }
+  .p-benefit strong{color:var(--brand-deep);font-weight:850;letter-spacing:.02em}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 18px}
+  .tags li{font-size:10.5px;font-weight:750;color:#51617a;background:#f1f5fa;border:1px solid #e3eaf4;border-radius:7px;padding:4px 8px}
+  .p-link{
+    margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:10px;
+    font-size:13px;font-weight:800;color:var(--brand-deep);
+    border-top:1px solid var(--line);padding-top:14px;transition:color .18s;
+  }
+  .p-link span{transition:transform .18s}
+  .p-link:hover{color:#0b6b62}
+  .p-link:hover span{transform:translate(3px,-3px)}
+
+  /* ---------- contact ---------- */
+  .contact{
+    position:relative;overflow:hidden;color:#fff;
+    background:linear-gradient(145deg,#07101d,#0b1b30 60%,#0c2233);
+  }
+  .contact::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(600px 360px at 90% 10%,rgba(37,99,235,.24),transparent 65%),
+      radial-gradient(520px 340px at 5% 90%,rgba(13,148,136,.22),transparent 65%);
+  }
+  .contact-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding:84px 0}
+  .contact .eyebrow{color:#5eead4}
+  .contact .eyebrow .dot{background:#2dd4bf;box-shadow:0 0 0 4px rgba(45,212,191,.16)}
+  .contact h2{font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.03em;line-height:1.12}
+  .contact p{color:#a9bace;margin-top:14px;max-width:48ch}
+  .contact-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);
+    border-radius:20px;padding:10px;box-shadow:0 30px 70px rgba(0,0,0,.3);
+  }
+  .contact-row{
+    display:flex;align-items:center;gap:14px;padding:14px 15px;border-radius:12px;
+    transition:background .18s;color:#dbe7f5;
+  }
+  .contact-row:hover{background:rgba(255,255,255,.07)}
+  .contact-row .ico{
+    width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;
+    background:rgba(45,212,191,.13);border:1px solid rgba(45,212,191,.22);color:#5eead4;
+  }
+  .contact-row .ico svg{width:17px;height:17px}
+  .contact-row .txt{display:flex;flex-direction:column;min-width:0}
+  .contact-row .lbl{font-size:9.5px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#7d94b1}
+  .contact-row .val{font-size:13.5px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .contact-card .btn{width:100%;margin-top:8px}
+  .contact-card .btn-primary{background:linear-gradient(135deg,#14b8a6,#0d9488);box-shadow:0 10px 26px rgba(20,184,166,.24)}
+
+  /* ---------- footer ---------- */
+  .site-footer{border-top:1px solid rgba(255,255,255,.08);background:#07101d;color:#7d94b1;padding:22px 0}
+  .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px}
+  .footer-inner a{color:#a9bace}
+  .footer-inner a:hover{color:#fff}
+  .to-top{font-weight:750;font-size:12px}
+
+  /* ---------- reveal ---------- */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    .spark span{animation:none}
+    *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:38px;padding:66px 0 74px}
+    .hero h1{max-width:16ch}
+    .profile-card{max-width:520px}
+    .about-grid{grid-template-columns:1fr;gap:28px}
+    .edu-grid{grid-template-columns:1fr 1fr}
+    .project-grid{grid-template-columns:1fr 1fr}
+    .contact-grid{grid-template-columns:1fr;gap:32px;padding:70px 0}
+  }
+  @media (max-width:780px){
+    .site-header nav{
+      position:absolute;left:0;right:0;top:69px;flex-direction:column;align-items:stretch;gap:2px;
+      background:#0a1626;border-bottom:1px solid rgba(255,255,255,.1);
+      padding:12px 20px 18px;display:none;box-shadow:0 24px 50px rgba(0,0,0,.35);
+    }
+    .site-header nav.open{display:flex}
+    .site-header nav a{padding:11px 4px;font-size:14px}
+    .site-header nav a::after{display:none}
+    .menu-toggle{display:block}
+    .nav-cta{display:none}
+    .section{padding:72px 0}
+  }
+  @media (max-width:680px){
+    .container,.nav-wrap{width:min(100% - 28px,var(--max))}
+    .edu-grid,.project-grid{grid-template-columns:1fr}
+    .about-facts{grid-template-columns:1fr 1fr}
+    .job{padding:22px 20px 22px 48px}
+    .job h3{font-size:16px}
+    .hero-meta{flex-direction:column;gap:6px}
+    .profile-card{padding:21px}
+  }
+  @media (max-width:420px){
+    .about-facts{grid-template-columns:1fr}
+    .mini-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#top" aria-label="Mahiya Watid — home">
+      <span class="brand-mark">MW</span>
+      <span class="brand-text">Mahiya Watid<small>IPE Engineer · Data Analyst</small></span>
+    </a>
+    <nav id="primary-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> IPE Engineer &amp; Data Analyst</p>
+        <h1>Turning operations data into <span class="grad">decisions that stick.</span></h1>
+        <p class="lede">I'm Mahiya Watid — an Industrial &amp; Production Engineer and Data Analyst focused on process improvement. I apply AI, machine learning, and deep learning models to solve operational problems, reduce bottlenecks, and make performance visible and easier to improve.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="hero-meta">
+          <li>Dhaka, Bangladesh</li>
+          <li><a href="mailto:shikhimoni8@gmail.com">shikhimoni8@gmail.com</a></li>
+        </ul>
+        <ul class="chips" aria-label="Core skills">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Excel</li>
+          <li>Machine Learning</li>
+          <li>Deep Learning</li>
+          <li>AI</li>
+          <li>Lean Six Sigma Black Belt</li>
+        </ul>
+      </div>
+
+      <aside class="profile-card reveal" aria-label="Profile summary">
+        <div class="profile-top">
+          <div class="avatar" aria-hidden="true">MW</div>
+          <div>
+            <h2>Mahiya Watid</h2>
+            <p>IPE Engineer &amp; Data Analyst</p>
+          </div>
+        </div>
+        <div class="profile-divider"></div>
+        <div class="mini-grid">
+          <div class="mini"><span class="mini-k">Focus</span><span class="mini-v">Process improvement</span></div>
+          <div class="mini"><span class="mini-k">Method</span><span class="mini-v">AI · ML · DL</span></div>
+          <div class="mini"><span class="mini-k">Tools</span><span class="mini-v">Python · SQL · Excel</span></div>
+          <div class="mini"><span class="mini-k">Based in</span><span class="mini-v">Dhaka, Bangladesh</span></div>
+        </div>
+        <div class="spark" aria-hidden="true">
+          <span style="--h:34%"></span><span style="--h:52%"></span><span style="--h:44%"></span>
+          <span style="--h:66%"></span><span style="--h:58%"></span><span style="--h:79%"></span>
+          <span style="--h:70%"></span><span style="--h:92%"></span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2>Operations-minded analytics.</h2>
+      </div>
+      <div class="reveal">
+        <p>I work at the intersection of manufacturing operations and data. My focus is simple: replace manual reporting with reliable systems, make KPIs visible to the people who act on them, and use Lean thinking to remove the friction behind the numbers.</p>
+        <p>In modern manufacturing environments, I have applied AI, machine learning, and deep learning models to solve production problems, reduce bottlenecks, and create lasting process improvements.</p>
+        <p>Day to day, that means KPI dashboards, automated trackers, centralized data-entry platforms, and Gemba/SOP audits — always with the goal of turning analysis into action.</p>
+        <div class="about-facts">
+          <div class="fact"><b>Lean Six Sigma</b><span>Black Belt — DMAIC, VSM, Kaizen, RCA</span></div>
+          <div class="fact"><b>Industrial Engineering</b><span>BSc IPE — AUST</span></div>
+          <div class="fact"><b>Data Science</b><span>MSc Applied Statistics &amp; Data Science</span></div>
+          <div class="fact"><b>Tools</b><span>Python, SQL, Excel, ML &amp; AI</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I've worked</h2>
+      </div>
+      <div class="timeline">
+        <article class="job reveal">
+          <div class="job-head">
+            <h3>Assistant Officer (Data Analyst) — Operational Excellence</h3>
+            <span class="job-date">Apr 2026 — Present</span>
+          </div>
+          <p class="job-company">Akij Resource · Dhaka, Bangladesh</p>
+          <ul>
+            <li>Build and maintain KPI dashboards for manufacturing performance, trends and headcount, supporting daily, weekly and monthly management reporting.</li>
+            <li>Automate manual reporting with Google Sheets and Apps Script — including a Problem Registration &amp; Resolution Tracker with escalation alerts and daily summaries.</li>
+            <li>Designed and launched a centralized ERP/data-management platform (HTML, CSS, JavaScript + Supabase, 12–15 tables) as a single secure data-entry point.</li>
+            <li>Apply DMAIC, VSM, Kaizen and root-cause analysis to remove non-value-added steps, and run Gemba/SOP audits to drive corrective actions.</li>
+          </ul>
+        </article>
+        <article class="job reveal">
+          <div class="job-head">
+            <h3>Junior Data Analyst</h3>
+            <span class="job-date">Sep 2024 — Apr 2025</span>
+          </div>
+          <p class="job-company">Data Solution 360 · Dhaka, Bangladesh</p>
+          <ul>
+            <li>Conducted market and industry research, identifying trends that informed business and strategic decisions.</li>
+            <li>Developed interactive dashboards to communicate key metrics and insights to stakeholders.</li>
+            <li>Supported customers with data-analysis questions and guided aspiring analysts on building data careers.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Education</p>
+        <h2>Academic background</h2>
+      </div>
+      <div class="edu-grid">
+        <article class="edu reveal">
+          <p class="year">2025 — 2026</p>
+          <h3>MSc in Applied Statistics and Data Science</h3>
+          <p class="school">Jahangirnagar University · Dept. of Statistics and Data Science</p>
+        </article>
+        <article class="edu reveal">
+          <p class="year">2020 — 2025</p>
+          <h3>BSc in Industrial and Production Engineering (IPE)</h3>
+          <p class="school">Ahsanullah University of Science and Technology (AUST)</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects with a purpose</h2>
+        <p class="section-sub">Dashboards and tools built to make operations faster, clearer and more accountable — each one starts from a real operational problem.</p>
+      </div>
+      <div class="project-grid">
+
+        <article class="project reveal">
+          <div class="project-top"><span class="p-num">01</span><span class="badge badge-live">Live demo</span></div>
+          <h3>Production Performance Dashboard</h3>
+          <p class="p-use">A single, installable view of production output, OEE, downtime and 5S/Kaizen KPIs for the plant floor.</p>
+          <p class="p-benefit"><strong>Benefit</strong> Gives teams a shared, offline-ready performance picture for faster daily decisions.</p>
+          <ul class="tags"><li>Manufacturing</li><li>KPI</li><li>PWA</li></ul>
+          <a class="p-link" href="https://mahiya98.github.io/static-production-dashboard/" target="_blank" rel="noopener">Open live project <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-top"><span class="p-num">02</span><span class="badge badge-demo">Static demo</span></div>
+          <h3>WorkTrac360 — Work Track Center</h3>
+          <p class="p-use">Tracks tasks, roles, responsibilities and notifications in one central work-management hub.</p>
+          <p class="p-benefit"><strong>Benefit</strong> Improves accountability and makes daily work visible across teams.</p>
+          <ul class="tags"><li>Task management</li><li>Roles</li><li>Notifications</li></ul>
+          <a class="p-link" href="https://mahiya98.github.io/worktrac360-static-demo/" target="_blank" rel="noopener">Open live demo <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-top"><span class="p-num">03</span><span class="badge badge-demo">Static demo</span></div>
+          <h3>OPEX Command Center</h3>
+          <p class="p-use">An efficient ERP system for OPEX teams across multiple SBUs, consolidating operational data into a single centralized database.</p>
+          <p class="p-benefit"><strong>Benefit</strong> Makes data easy to connect to and analyze, giving every SBU one reliable source of truth for faster, better-informed decisions.</p>
+          <ul class="tags"><li>ERP</li><li>Single database</li><li>Multi-SBU</li></ul>
+          <a class="p-link" href="https://mahiya98.github.io/command-center-hub-static/" target="_blank" rel="noopener">Open live demo <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-top"><span class="p-num">04</span><span class="badge badge-live">Live demo</span></div>
+          <h3>VRM Breakdown Prediction</h3>
+          <p class="p-use">A machine-learning model that detects early breakdown signals from machine data.</p>
+          <p class="p-benefit"><strong>Benefit</strong> Supports preventive maintenance and reduces unplanned downtime.</p>
+          <ul class="tags"><li>Machine learning</li><li>Predictive maintenance</li><li>Downtime</li></ul>
+          <a class="p-link" href="https://mahiya98.github.io/VRM_Breakdown_Prediction/" target="_blank" rel="noopener">Open live project <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-top"><span class="p-num">05</span><span class="badge badge-live">Live demo</span></div>
+          <h3>Manpower Reduction Dashboard</h3>
+          <p class="p-use">Monitors FTE deployment, workload and a phased manpower-reduction plan with capacity alerts.</p>
+          <p class="p-benefit"><strong>Benefit</strong> Shows where automation and redeployment can reduce cost without losing capacity.</p>
+          <ul class="tags"><li>FTE</li><li>Capacity planning</li><li>Automation</li></ul>
+          <a class="p-link" href="https://mahiya98.github.io/FTE-Work-Tracker/" target="_blank" rel="noopener">Open live project <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-top"><span class="p-num">06</span><span class="badge badge-live">Live demo</span></div>
+          <h3>AI-Powered 5S Audit</h3>
+          <p class="p-use">A camera-based 5S audit that uses AI to score work areas and generate structured findings and reports.</p>
+          <p class="p-benefit"><strong>Benefit</strong> Makes 5S audits faster, more consistent and easier to act on.</p>
+          <ul class="tags"><li>AI vision</li><li>5S</li><li>Audit reports</li></ul>
+          <a class="p-link" href="https://mahiya98.github.io/5s-audit/" target="_blank" rel="noopener">Open live project <span aria-hidden="true">↗</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="dot"></span> Contact</p>
+        <h2>Let's make performance visible.</h2>
+        <p>Whatever your industry — manufacturing, services, retail, logistics, or beyond — if you're facing a data analysis problem, looking to remove a bottleneck, or aiming to improve your overall process, I'd be glad to talk.</p>
+      </div>
+      <div class="contact-card reveal">
+        <a class="contact-row" href="mailto:shikhimoni8@gmail.com">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <span class="txt"><span class="lbl">Email</span><span class="val">shikhimoni8@gmail.com</span></span>
+        </a>
+        <a class="contact-row" href="tel:+8801732965855">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          </span>
+          <span class="txt"><span class="lbl">Phone</span><span class="val">+880 1732 965855</span></span>
+        </a>
+        <a class="contact-row" href="https://www.linkedin.com/in/mahiya-watid-b27859230?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>
+          </span>
+          <span class="txt"><span class="lbl">LinkedIn</span><span class="val">mahiya-watid</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="year">2026</span> Mahiya Watid · Dhaka, Bangladesh</span>
+    <a class="to-top" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  // Mobile navigation
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
+
+  // Reveal on scroll
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const items = document.querySelectorAll('.reveal');
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('in'));
+  }
+
+  // Active nav link
+  const links = [...document.querySelectorAll('#primary-nav a')];
+  const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + entry.target.id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => spy.observe(s));
+  }
+
+  // Year
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
